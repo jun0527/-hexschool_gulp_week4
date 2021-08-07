@@ -1,0 +1,260 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    border-left: 1px solid #DCDCDC;
+    border-right: 1px solid #DCDCDC;
+    border-bottom: 8px solid transparent;
+    color: $dark;
+    @include pad {
+      width: 230px;
+      padding-top: 14px;
+      padding-bottom: 6px;
+    }
+    @include mobile {
+      width: 115px;
+      padding-top: 6px;
+      padding-bottom: 1px;
+      border-bottom: 4px solid transparent;
+    }
+    .icon {
+      font-size: 48px;
+      margin-right: 8px;
+      @include pad {
+        font-size: 32px;
+      }
+      @include mobile {
+        font-size: 16px;
+        margin-right: 2px;
+      }
+    }
+    p {
+      font-size: 32px;
+      font-weight: 500;
+      @include pad {
+        font-size: 24px;
+      }
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+    &:hover {
+      border-bottom: 8px solid $red-700;
+      @include mobile {
+        border-bottom: 4px solid $red-700;
+      }
+    }
+    &.active {
+      border-bottom: 8px solid $red-700;
+      @include mobile {
+        border-bottom: 4px solid $red-700;
+      }
+    }
+  }
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+  animation: show 0.5s;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.products{
+  .banner {
+    display: flex;
+    margin-bottom: 80px;
+    @include pad {
+      margin-bottom: 56px;
+    }
+    @include mobile {
+      margin-bottom: 32px;
+    }
+    div {
+      width: 50%;
+      height: 304px;
+      background-size: cover;
+      @include mobile {
+        height: 148px;
+      }
+    }
+    .opticalBanner.leftBanner {
+      background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week4/banner-1.png');
+      background-position: center;
+      @include pad{
+        background-image: url('https://i.imgur.com/rC9iw7K.jpg');
+        background-position: 50% 70%;
+      }
+    }
+    .opticalBanner.rightBanner {
+      background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week4/banner-2.png');
+      background-position: center;
+      @include pad{
+        background-image: url('https://i.imgur.com/Ok9TnDl.jpg');
+      }
+    }
+    .sunglassesBanner.leftBanner {
+      background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-3.png');
+      background-position: center;
+      @include pad{
+        background-position: 50% 70%;
+      }
+    }
+    .sunglassesBanner.rightBanner {
+      background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2-color.png');
+      background-position: center;
+      @include pad{
+        background-position: 35% 50%;
+      }
+    }
+  }
+}
+.productsPages {
+  h2 {
+    font-size: 42px;
+    font-weight: 500;
+    text-align: center;
+    @include pad {
+      font-size: 32px;
+    }
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+  h3 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    @include pad {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+    @include mobile {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.productList {
+  padding-bottom: 160px;
+  @include pad {
+    padding-bottom: 96px;
+  }
+  @include mobile {
+    padding-bottom: 56px;
+  }
+  .imageArea {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+  h4, .price {
+    font-size: 24px;
+    color: $dark;
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  .price {
+    color: $red-700;
+    font-weight: 500;
+  }
+  .productColor {
+    display: flex;
+    div {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      margin-right: 8px;
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+      @include mobile {
+        margin-right: 4px;
+      }
+    }
+    .darkBrown {
+      background: #5f3e2d;
+    }
+    .lightBrown {
+      background: #b75929;
+    }
+  }
+}
+.optical {
+  li {
+    width: 25%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 104px;
+    &:nth-child(-n+4) {
+      margin-top: 0;
+    }
+    @include pad {
+      width: 50%;
+      margin-top: 72px;
+      &:nth-child(-n+4) {
+        margin-top: 72px;
+      }
+      &:nth-child(-n+2) {
+        margin-top: 0;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      margin-top: 32px;
+      &:nth-child(-n+4) {
+        margin-top: 32px;
+      }
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+.sunglasses {
+  li {
+    width: 33.33333%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 104px;
+    &:nth-child(-n+3) {
+      margin-top: 0;
+    }
+    @include pad {
+      width: 50%;
+      margin-top: 72px;
+      &:nth-child(-n+3) {
+        margin-top: 72px;
+      }
+      &:nth-child(-n+2) {
+        margin-top: 0;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      margin-top: 32px;
+      &:nth-child(-n+3) {
+        margin-top: 32px;
+      }
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+}

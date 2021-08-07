@@ -1,0 +1,70 @@
+/*margin、padding設定*/
+@each $name, $key in $spaces {
+  .mr-#{$name} {
+    margin-right: $key;
+  }
+  .mb-#{$name} {
+    margin-bottom: $key;
+  }
+}
+.px-1 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/*display*/
+.d-block {
+  display: block;
+}
+/*flex 設定*/
+.d-flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-column {
+  flex-direction: column;
+}
+@each $name, $key in $jc {
+  .jc-#{$name} {
+    justify-content: $key;
+  }
+}
+@each $name, $key in $ai {
+  .ai-#{$name} {
+    align-items: $key;
+  }
+}
+/*文字、背景顏色設定*/
+@each $name, $key in $colors {
+  .text-#{$name} {
+    color: $key;
+  }
+  .bg-#{$name} {
+    background: $key;
+  }
+}
+/*文字設定*/
+@each $name, $key in $fws {
+  .fw-#{$name} {
+    font-weight: $key;
+  }
+}
+@each $name, $key in $align {
+  .text-#{$name} {
+    text-align: $key;
+  }
+}
+.fst-italic {
+  font-style: italic;
+}
+/*寬高度100%*/
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}

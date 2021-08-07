@@ -1,0 +1,193 @@
+.location {
+  padding: 96px 0 160px 0;
+  @include pad {
+    padding: 60px 0 96px 0;
+  }
+  @include mobile {
+    padding: 28px 0 56px 0;
+  }
+  label {
+    margin-left: 15px;
+    font-size: 24px;
+    @include pad {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+      margin-left: 12px;
+    }
+  }
+  select {
+    color: #495057;
+    font-size: 18px;
+    width: 324px;
+    height: 45px;
+    padding: 0 19px 0 19px;
+    margin-left: 20px;
+    @include pad {
+      width: 237px;
+      height: 46px;
+      font-size: 16px;
+      padding: 0 16px 0 16px;
+    }
+    @include mobile {
+      width: 277px;
+      height: 36px;
+      font-size: 14px;
+      margin-left: 12px;
+    }
+  }
+}
+.locationList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-top: 32px;
+  @include pad {
+    margin-top: 24px;
+  }
+  @include mobile {
+    margin-top: 20px;
+  }
+  >li {
+    width: 33.33333%;
+    margin-top: 32px;
+    &:nth-child(-n+3) {
+      margin-top: 0;
+    }
+    @include pad {
+      width: 50%;
+      margin-top: 20px;
+      &:nth-child(-n+3) {
+        margin-top: 20px;
+      }
+      &:nth-child(-n+2) {
+        margin-top: 0;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      margin-top: 16px;
+      &:nth-child(-n+3) {
+        margin-top: 16px;
+      }
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+.location .card {
+  padding-left: 15px;
+  padding-right: 15px;
+  h3 {
+    font-size: 24px;
+    padding: 12px 24px;
+    border: 1px solid #00000020;
+    @include pad {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .contact {
+    padding: 16px 24px;
+    border: 1px solid #00000020;
+    li {
+      display: flex;
+      margin-bottom: 8px;
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+    .icon {
+      font-size: 24px;
+      margin-right: 8px;
+      @include pad {
+        font-size: 20px;
+      }
+    }
+    p {
+      font-size: 20px;
+      @include pad {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.detailedBtn {
+  display: block;
+  width: 100%;
+  height: 67px;
+  line-height: 67px;
+  text-align: center;
+  font-size: 19px;
+  background: $dark;
+  color: $white;
+  border: none;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include pad {
+    height: 52px;
+    line-height: 52px;
+    font-size: 14px;
+  }
+}
+//locationInfo
+.locationInfoContent {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.locationInfo .card {
+  width: 41.66667%;
+  @include pad {
+    width: 100%;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include mobile {
+    display: block;
+    margin-bottom: 16px;
+  }
+  .imageArea {
+    @include pad {
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 50%;
+      height: 164px;
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+    @include mobile {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+  .cardContent {
+    @include pad {
+      width: 50%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+.mapArea {
+  padding: 0 15px 0 15px;
+  width: 58.33333%;
+  @include pad {
+    width: 100%;
+    height: 422px;
+  }
+  @include mobile {
+    height: 211px;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,233 @@
+.header {
+  padding: 30px 88px 29.43px 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: $red-700;
+  height: 108px;
+  @include pad {
+    height: auto;
+    padding: 30px 39px;
+  }
+  @include mobile {
+    justify-content: center;
+    padding: 0;
+  }
+  h1 > a {
+    @include hide-text;
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/logo.png);
+    background-size: cover;
+    width: 80px;
+    height: 48.57px;
+    &:hover {
+      opacity: 0.8;
+    }
+    @include mobile {
+      width: 48px;
+      height: 29.14px;
+      margin: 10px 0;
+    }
+  }
+  .menu {
+    display: flex;
+    @include mobile {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    li {
+      margin-left: 64px;
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+      @include pad {
+        margin-left: 40px;
+      }
+      @include mobile {
+        width: 50%;
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+    a {
+      display: block;
+      color: #fff;
+      font-size: 1.25rem;
+      border-bottom: 5px solid transparent;
+      &:hover {
+        font-weight: 700;
+        border-bottom: 5px solid #fff;
+        @include mobile {
+          border: 1px solid #fff;
+          color: $red-700;
+          background: #fff;
+        }
+      }
+      @include mobile {
+        border-bottom: none;
+        padding: 8px 0;
+        border: 1px solid #fff;
+      }
+      &.active {
+        font-weight: 700;
+        border-bottom: 5px solid #fff;
+        @include mobile {
+          border: 1px solid #fff;
+          background: #fff;
+          color: $red-700;
+        }
+      }
+    }
+  }
+}
+.footer {
+  padding: 32px 0 40px 0;
+  background: $red-700;
+  @include pad {
+    padding: 32px 0;
+  }
+  @include mobile {
+    padding: 24px 0;
+  }
+  .menu {
+    display: flex;
+    margin-bottom: 36px;
+    @include mobile {
+      display: none;
+    }
+    li {
+      margin-right: 48px;
+      @include pad {
+        margin-right: 40px;
+      }
+    }
+    a {
+      color: $white;
+      border-bottom: 3px solid transparent;
+      &:hover {
+        border-bottom: 3px solid #fff;
+      }
+    }
+  }
+  .contact {
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      @include pad {
+        margin-bottom: 14px;
+      }
+      @include mobile {
+        margin-bottom: 7px;
+      }
+    }
+    img {
+      width: 36px;
+      margin-right: 16px;
+      @include pad {
+        width: 24px;
+        margin-right: 8px;
+      }
+      @include mobile {
+        width: 20px;
+        margin-right: 5px;
+      }
+    }
+    a {
+      font-size: 36px;
+      color: $white;
+      &:hover {
+        text-decoration: underline;
+      }
+      @include pad {
+        font-size: 20px;
+      }
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+  .community {
+    display: flex;
+    li {
+      margin-right: 32px;
+      @include pad {
+        margin-right: 24px;
+      }
+    }
+    a:hover {
+      opacity: 0.7;
+    }
+    img {
+      @include pad {
+        width: 24px;
+      }
+    }
+  }
+  .clause {
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    margin-top: 32px;
+    @include mobile {
+      flex-direction: column;
+      margin-top: 16px;
+    }
+    p {
+      @include mobile {
+        margin-bottom: 8px;
+      }
+    }
+    ul {
+      display: flex;
+      @include mobile {
+        flex-direction: column;
+      }
+      li {
+        margin-right: 48px;
+        @include pad {
+          margin-right: 24px;
+        }
+        @include mobile {
+          margin-right: 0;
+          margin-bottom: 8px;
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+        }
+      }
+      a {
+        color: $white;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  @include pad {
+    max-width: 720px;
+  }
+  @include mobile {
+    max-width: 375px;
+  }
+}
+.titleL {
+  font-weight: bold;
+  padding-left: 16px;
+  margin-left: 15px;
+  margin-bottom: 60px;
+  border-left: 8px solid $red-800;
+  @include pad {
+    margin-bottom: 40px;
+  }
+  @include mobile {
+    font-size: 28px;
+    padding-left: 8px;
+    margin-bottom: 24px;
+  }
+}

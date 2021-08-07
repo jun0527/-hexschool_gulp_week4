@@ -1,0 +1,351 @@
+.index {
+  section {
+    padding: 60px 15px 80px 15px;
+    @include pad {
+      padding: 40px 0 56px 0;
+    }
+    @include mobile {
+      padding: 32px 0 40px 0;
+    }
+  }
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+    @include pad {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  .banner {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png);
+    height: calc(100vh - 108px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media(max-width: 768px) {
+      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-sm.png);
+    }
+    @include mobile {
+      height: 394px;
+    }
+    .title {
+      font-size: 36px;
+      color: $primary;
+      text-align: right;
+      margin-bottom: 0;
+      @include pad {
+        font-size: 20px;
+      }
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+    p {
+      font-size: 64px;
+      color: $primary;
+      font-weight: bold;
+      @include pad {
+        font-size: 48px;
+      }
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+  }
+}
+.feature {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 25%;
+    padding: 0 15px 0 15px;
+    @include pad {
+      width: 50%;
+      margin-bottom: 32px;
+      padding: 0 52.5px 0 52.5px;
+    }
+    @include mobile {
+      width: 100%;
+      padding: 0 60px 0 60px;
+    }
+  }
+  .icon {
+    display: block;
+    text-align: center;
+    font-size: 100px;
+    color: $primary;
+    margin-bottom: 16px;
+    @include pad {
+      font-size: 66px;
+    }
+    @include mobile {
+      font-size: 100px;
+    }
+  }
+}
+.classicSeries {
+  color: $red-700;
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+    @include pad {
+      margin-bottom: 8px;
+    }
+    @include mobile {
+      position: relative;
+    }
+  }
+  .reverse {
+    flex-direction: row-reverse;
+    @include pad {
+      flex-direction: row;
+    }
+    .icon {
+      margin-left: 8px;
+      @include pad {
+        margin-right: 8px;
+        margin-left: 30px;
+      }
+    }
+    h3 {
+      margin-right: 30px;
+      @include pad {
+        margin-right: 0;
+      }
+    }
+  }
+  img {
+    width: 57.207207%;
+    height: auto;
+    @include pad {
+      width: 56.521739%
+    }
+    @include mobile {
+      width: 100%
+    }
+  }
+  .classicSeriesContent {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  .icon {
+    font-size: 48px;
+    margin-right: 8px;
+    margin-left: 30px;
+    @include pad {
+      font-size: 40px;
+    }
+    @include mobile {
+      margin-left: 0;
+    }
+  }
+  h3 {
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+    @include pad {
+      font-size: 28px;
+    }
+  }
+}
+.coBranding {
+  background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png');
+  background-size: cover;
+  background-position: center;
+  li {
+    width: 50%;
+    position: relative;
+    padding: 0 15px;
+    @include mobile {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+  .titleArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba($color: #fff, $alpha: 0.5);
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+  }
+  h3 {
+    font-size: 72px;
+    color: $red-700;
+    font-weight: bold;
+    @include pad {
+      font-size: 32px;
+    }
+  }
+}
+.evaluationList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  li {
+    width: 25%;
+    padding: 0 15px;
+    @include pad {
+      width: 50%;
+      margin-top: 32px;
+      &:nth-child(-n+2) {
+        margin-top: 0;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      margin-top: 16px;
+      &:nth-child(-n+2) {
+        margin-top: 16px;
+      }
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-shadow: 0px 2px 6px #00000029;
+  }
+  .card-content {
+    padding: 16px;
+    color: $gray-800;
+  }
+  h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  p {
+    margin-bottom: 36px;
+  }
+  .date {
+    color: #707070;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 16px;
+  }
+}
+.contactUsArea {
+  .container {
+    max-width: 730px;
+    @include pad {
+      max-width: 450px;
+    }
+    @include mobile {
+      max-width: 345px;
+    }
+  }
+  h2 {
+    margin-bottom: 24px;
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+  p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    @include pad {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    @include mobile {
+      margin-bottom: 8px;
+    }
+  }
+  .fromGroup {
+    margin-bottom: 16px;
+    @include pad {
+      margin-bottom: 8px;
+    }
+    label {
+      @include pad {
+        font-size: 14px;
+      }
+    }
+    input {
+      width: 100%;
+      height: 50px;
+      background: none;
+      font-size: 16px;
+      padding: 0 16px;
+      border: 1px solid #000;
+      @include pad {
+        height: 36px;
+        font-size: 14px;
+        padding: 0 12px;
+      }
+    }
+    textarea {
+      width: 100%;
+      height: 136px;
+      resize: none;
+      background: none;
+      font-size: 16px;
+      padding: 12px 16px;
+      @include pad {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+    }
+  }
+  .checkboxArea {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    @include pad {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    label, input {
+      cursor: pointer;
+    }
+  }
+  input[type="submit"] {
+    width: 340px;
+    height: 54px;
+    background: $red-700;
+    color: $white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    @include pad {
+      width: 210px;
+      height: 40px;
+      font-size: 14px;
+    }
+    @include mobile{
+      width: 165px;
+      height: 36px;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

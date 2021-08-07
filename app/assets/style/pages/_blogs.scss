@@ -1,0 +1,122 @@
+.blogsArea {
+  padding: 40px 0 160px 0;
+  @include pad {
+    padding: 32px 0 96px 0;
+  }
+  @include mobile {
+    padding: 28px 0 56px 0;
+  }
+}
+.blogsList {
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    color: $dark;
+    margin-bottom: 60px;
+    @include pad {
+      margin-bottom: 24px;
+    }
+    @include mobile {
+      margin-bottom: 20px;
+    }
+    &:hover .cardContentArea {
+      opacity: 0.7;
+    }
+  }
+  .imageArea {
+    width: 58.33333%;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include pad {
+      width: 50%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  .cardContentArea {
+    width: 41.6667%;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include pad {
+      width: 50%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+  h3 {
+    font-size: 32px;
+    color: $primary;
+    @include pad {
+      font-size: 20px;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  .englishTitle {
+    color: $dark;
+    font-size: 20px;
+    font-weight: 500;
+    @include pad {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+  .ceadHarder p {
+    @include pad {
+      font-size: 14px;
+    }
+  }
+  .contentL {
+    margin-top: 24px;
+    @include pad {
+      display: none;
+    }
+    p {
+      font-size: 20px;
+      @include pad {
+        font-size: 14px;
+      }
+    }
+  }
+  .contentS {
+    display: none;
+    @include pad {
+      display: block;
+      margin-top: 32px;
+    }
+    @include mobile {
+      display: none;
+    }
+    p {
+      font-size: 14px;
+    }
+    .moreS {
+      font-weight: bold;
+      color: #555555;
+      margin-top: 14px;
+    }
+  }
+  .cardFooter {
+    background: none;
+    border: none;
+    font-size: 36px;
+    font-weight: 900;
+    color: $primary;
+    margin-top: 14px;
+    @include pad {
+      display: none;
+    }
+  }
+}

@@ -209,12 +209,18 @@
 .container {
   max-width: 1140px;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
   @include pad {
     max-width: 720px;
   }
   @include mobile {
     max-width: 375px;
   }
+}
+.container.px-0 {
+  padding-left: 0;
+  padding-right: 0;
 }
 .titleL {
   font-weight: bold;
